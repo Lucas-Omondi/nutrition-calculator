@@ -1,0 +1,66 @@
+/* General page styling */
+body {
+    background-color: #f3f4f6;
+    transition: background-color 0.3s;
+}
+
+body.calculator-active {
+    background-image: url("calculator-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Styling the calculator section */
+.calculator-section {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.result h2 {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.ingredient-row {
+    margin-bottom: 15px;
+}
+
+/* Home Section Styling */
+.home-section {
+    background-image: url("home-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 80px 0;
+    margin-bottom: 20px;
+}
+
+.home-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.home-section p {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.home-section a {
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+}
+
+.home-section a:hover {
+    background-color: #f8f9fa;
+    color: #212529;
+}

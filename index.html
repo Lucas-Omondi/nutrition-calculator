@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutritional Calculator</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/homepage.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Nutrition Tracker</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#calculator">Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section class="home-section text-center text-white">
+        <div class="container">
+            <h1>Welcome to Your Nutritional Calculator</h1>
+            <p class="lead">
+                Eating a healthy diet is crucial to living a vibrant life. The food choices you make daily directly impact
+                your energy levels, mood, and overall well-being. Monitoring the nutritional value of your meals allows you
+                to make better decisions and meet your health goals efficiently.
+            </p>
+            <p class="lead">
+                Whether you want to lose weight, build muscle, or maintain a balanced diet, tracking your nutrient intake helps
+                you stay on course. Our easy-to-use calculator provides insights into calories, proteins, carbohydrates, and fats
+                for the foods you consume. Stay on top of your health with personalized meal tracking!
+            <br><br>
+            </p>
+            <p class="lead">
+                Start your journey towards better health today. Explore your meals, track your daily intake, and unlock the
+                power of informed eating. With the right tools, achieving your health goals has never been easier.
+            <br><br>
+            </p>
+            <a href="#calculator" class="btn btn-light btn-lg">Start Tracking Now</a>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="calculator-section py-5" id="calculator">
+        <div class="container">
+            <h1 class="text-center mb-4">Nutritional Calculator</h1>
+
+            <form id="nutrition-form">
+                <div id="ingredient-list" class="mb-3">
+                    <div class="ingredient-row row g-2 align-items-center">
+                        <div class="col-md-5">
+                            <label for="food" class="form-label">Select Food:</label>
+                            <select class="form-select food-dropdown" name="food" required>
+                                <option value="" disabled selected>Select a food item</option>
+                                <option value="chicken">Chicken Breast</option>
+                                <option value="rice">Rice</option>
+                                <option value="broccoli">Broccoli</option>
+                                <option value="eggs">Eggs</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-4">
+                            <label for="quantity" class="form-label">Quantity (grams or servings):</label>
+                            <input type="number" class="form-control quantity-input" min="1" placeholder="e.g., 100" required>
+                        </div>
+
+                        <div class="col-md-3 text-md-end">
+                            <button type="button" class="btn btn-danger remove-ingredient">Remove</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                    <button type="button" id="add-ingredient" class="btn btn-primary">+ Add Another Ingredient</button>
+                    <button type="submit" class="btn btn-success" disabled>Calculate</button>
+                </div>
+            </form>
+
+            <div class="result mt-4">
+                <h2>Nutrition Info</h2>
+                <table class="table table-bordered">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Nutrient</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Calories</td>
+                            <td>---</td>
+                        </tr>
+                        <tr>
+                            <td>Proteins</td>
+                            <td>---</td>
+                        </tr>
+                        <tr>
+                            <td>Carbohydrates</td>
+                            <td>---</td>
+                        </tr>
+                        <tr>
+                            <td>Fats</td>
+                            <td>---</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="assets/javascript/script.js"></script>
+</body>
+</html>
